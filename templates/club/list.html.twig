@@ -1,0 +1,37 @@
+
+ {#{dump(formations)}#}
+<table>
+    <tr>
+    <td>
+    </td>
+    </tr>
+</table>
+{% set nbmax = 0 %}
+
+{% for formation in formations %}
+       {% set nbmax = max(nbmax,formation.nb_participants) %}
+{% endfor %}
+
+<table border="1">
+    <tr>
+        <th>Reference</th>
+        <th>Titre</th>
+        <th>Description</th>
+        <th>date_debut</th>
+        <th>date_fin</th>
+        <th>nb_participants</th>
+    </tr>
+{% for formation in formations %}
+        <tr>
+            <td>{{ formation.ref }}</td>
+            <td>{{ formation.Titre|upper }}</td>
+            <td>{{ formation.Description }}</td>
+            <td>{{ formation.date_debut }}</td>
+            <td>{{ formation.date_fin }}</td>
+            <td>{{ formation.nb_participants }}</td>
+        </tr>
+{% endfor %}
+</table>
+
+
+    <h2>Nbre des Formations: {{formations| length}}</h2>
