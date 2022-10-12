@@ -1,0 +1,18 @@
+
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+    </tr>
+
+{% for classroom in Classrooms %}
+
+        <tr>
+            <td>{{ classroom.Id }}</td>
+            <td>{{ classroom.Name}}</td>
+          
+        </tr>
+        
+{% endfor %}
+
+</table>

@@ -1,0 +1,24 @@
+
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Delete</th>
+        <th>Edit</th>
+    </tr>
+
+{% for student in s %}
+
+        <tr>
+            <td>{{ student.Id}}</td>
+            <td>{{ student.NSC }}</td>
+            <td><a href="{{ path('delete_student', {id:student.id}) }}">Delete</a></td>
+            <td><a href="{{ path('update_student', {id:student.id}) }}">Edit</a></td>
+
+        </tr>
+        
+{% endfor %}
+</table>
+
+<a href="http://atelier3.com/index.php/student/add" >Add Student<a/>
+

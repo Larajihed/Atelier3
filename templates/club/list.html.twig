@@ -21,7 +21,9 @@
         <th>date_fin</th>
         <th>nb_participants</th>
     </tr>
+
 {% for formation in formations %}
+
         <tr>
             <td>{{ formation.ref }}</td>
             <td>{{ formation.Titre|upper }}</td>
@@ -30,7 +32,9 @@
             <td>{{ formation.date_fin }}</td>
             <td>{{ formation.nb_participants }}</td>
         </tr>
+        
 {% endfor %}
+
 </table>
 
 
